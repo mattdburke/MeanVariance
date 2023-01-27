@@ -20,7 +20,6 @@ port_sd <- sqrt(
     (2 * w_1 * w_2 * ret_x_sd * ret_y_sd * p)
 )
 
-
 plot(
     port_sd, 
     port_ret, 
@@ -28,3 +27,7 @@ plot(
     ylim=c(0.03, 0.2),
     xlab = "Portfolio Volatility",
     ylab = "Portfolio Expected Return")
+
+# sharpe ratio
+sr = (port_ret - 0.02) / port_sd
+plot(w, sr)
